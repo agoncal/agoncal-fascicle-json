@@ -11,6 +11,7 @@
   <modules>
     <module>getting-started</module>
     <module>putting-together</module>
+    <module>understanding</module>
   </modules>
 
   <properties>
