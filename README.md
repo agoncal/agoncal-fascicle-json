@@ -1,2 +1,3 @@
-# agoncal-fascicle-jaxrs
-Code of my future CDI fascicle
+# agoncal-fascicle-jsonp
+
+Code of my future JSON-P Fascicle
