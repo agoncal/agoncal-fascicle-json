@@ -10,18 +10,16 @@
 
   <modules>
     <module>getting-started</module>
+    <module>processing</module>
     <module>putting-together</module>
     <module>understanding</module>
   </modules>
 
   <properties>
     <version.java>1.8</version.java>
-    <!-- JAX-RS -->
-    <version.jersey>2.26-b03</version.jersey>
-    <!-- Other -->
-    <version.jpa-api>2.2</version.jpa-api>
-    <version.jta-api>1.2</version.jta-api>
-    <version.moxy>2.7.0</version.moxy>
+    <!-- JSON-P -->
+    <version.json-api>1.1</version.json-api>
+    <version.json>1.1</version.json>
     <!-- Test -->
     <version.junit>4.12</version.junit>
     <!-- Maven Plugins -->
@@ -48,29 +46,16 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- JAX-RS -->
+      <!-- JSON-P -->
       <dependency>
-        <groupId>javax.ws.rs</groupId>
-        <artifactId>javax.ws.rs-api</artifactId>
-        <version>2.1-m09</version>
-        <scope>provided</scope>
-      </dependency>
-      <!-- Other -->
-      <dependency>
-        <groupId>javax.persistence</groupId>
-        <artifactId>javax.persistence-api</artifactId>
-        <version>${version.jpa-api}</version>
+        <groupId>javax.json</groupId>
+        <artifactId>javax.json-api</artifactId>
+        <version>${version.json-api}</version>
       </dependency>
       <dependency>
-        <groupId>javax.transaction</groupId>
-        <artifactId>javax.transaction-api</artifactId>
-        <version>${version.jta-api}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.persistence</groupId>
-        <artifactId>org.eclipse.persistence.moxy</artifactId>
-        <version>${version.moxy}</version>
-        <scope>test</scope>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.json</artifactId>
+        <version>${version.json}</version>
       </dependency>
 
       <!-- Test -->

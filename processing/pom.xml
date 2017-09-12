@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.agoncal.fascicle.jsonp</groupId>
+  <artifactId>processing</artifactId>
+  <version>1.1</version>
+  <packaging>jar</packaging>
+  <name>JSON-P :: Processing</name>
+
+  <parent>
+    <groupId>org.agoncal.fascicle</groupId>
+    <artifactId>jsonp</artifactId>
+    <version>1.1</version>
+  </parent>
+
+  <dependencies>
+    <!-- JSON-P -->
+    <dependency>
+      <groupId>javax.json</groupId>
+      <artifactId>javax.json-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.json</artifactId>
+    </dependency>
+
+    <!-- Test -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
