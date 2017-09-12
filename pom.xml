@@ -21,7 +21,7 @@
     <version.json-api>1.1</version.json-api>
     <version.json>1.1</version.json>
     <!-- Test -->
-    <version.junit>4.12</version.junit>
+    <version.junit>5.0.0</version.junit>
     <!-- Maven Plugins -->
     <version.clean.plugin>3.0.0</version.clean.plugin>
     <version.compiler.plugin>3.6.2</version.compiler.plugin>
@@ -60,15 +60,9 @@
 
       <!-- Test -->
       <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
         <version>${version.junit}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.glassfish.jersey.test-framework.providers</groupId>
-        <artifactId>jersey-test-framework-provider-jdk-http</artifactId>
-        <version>${version.jersey}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
