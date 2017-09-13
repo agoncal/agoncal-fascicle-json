@@ -12,10 +12,6 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CreditCard {
 
-  // ======================================
-  // =             Attributes             =
-  // ======================================
-
   @XmlAttribute
   private String number;
   @XmlElement(name = "expiry_date")
