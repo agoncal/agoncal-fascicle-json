@@ -19,7 +19,9 @@
   <properties>
     <version.java>1.8</version.java>
     <!-- JSON-P and JSON-B -->
+    <version.json-b>1.0</version.json-b>
     <version.json-api>1.1</version.json-api>
+    <version.yasson>1.0</version.yasson>
     <version.json>1.1</version.json>
     <!-- Other -->
     <version.jersey>2.26-b03</version.jersey>
@@ -69,9 +71,19 @@
     <dependencies>
       <!-- JSON-P and JSON-B -->
       <dependency>
+        <groupId>javax.json.bind</groupId>
+        <artifactId>javax.json.bind-api</artifactId>
+        <version>${version.json-b}</version>
+      </dependency>
+      <dependency>
         <groupId>javax.json</groupId>
         <artifactId>javax.json-api</artifactId>
         <version>${version.json-api}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse</groupId>
+        <artifactId>yasson</artifactId>
+        <version>${version.yasson}</version>
       </dependency>
       <dependency>
         <groupId>org.glassfish</groupId>

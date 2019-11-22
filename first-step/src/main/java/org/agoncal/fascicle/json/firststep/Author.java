@@ -1,5 +1,7 @@
 package org.agoncal.fascicle.json.firststep;
 
+import java.time.LocalDate;
+
 // @formatter:off
 // tag::adocSnippet[]
 public class Author {
@@ -9,6 +11,7 @@ public class Author {
   private String lastName;
   private String bio;
   private String email;
+  private LocalDate dateOfBirth;
 
   // Constructors, getters, setters
   // tag::adocSkip[]
@@ -72,6 +75,19 @@ public class Author {
     this.email = email;
     return this;
   }
-  // end::adocSkip[]
+
+  public LocalDate getDateOfBirth() {
+    return dateOfBirth;
+  }
+
+  public void setDateOfBirth(LocalDate dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
+
+  public Author dateOfBirth(LocalDate dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+    return this;
+  }
+// end::adocSkip[]
 }
 // end::adocSnippet[]
