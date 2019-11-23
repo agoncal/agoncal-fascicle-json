@@ -20,7 +20,7 @@ public class AuthorTest {
 
   @BeforeAll
   static void init() {
-    Jsonb jsonb = JsonbBuilder.create();
+    jsonb = JsonbBuilder.create();
   }
   // end::adocBegin[]
 
@@ -35,6 +35,7 @@ public class AuthorTest {
     Author author = new Author().firstName("Adams").lastName("Douglas");
 
     String result = jsonb.toJson(author);
+    System.out.println(result);
 
     assertNotNull(author.getId(), "Id should not be null");
     // end::adocShouldCreateAnAuthor[]
