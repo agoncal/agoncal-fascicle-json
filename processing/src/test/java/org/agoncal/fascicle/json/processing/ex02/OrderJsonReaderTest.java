@@ -1,4 +1,4 @@
-package org.agoncal.fascicle.jsonp.processing.ex02;
+package org.agoncal.fascicle.json.processing.ex02;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package org.agoncal.fascicle.jsonp.puttingtogether;
+package org.agoncal.fascicle.json.puttingtogether;
 
 import org.junit.jupiter.api.Test;
 
