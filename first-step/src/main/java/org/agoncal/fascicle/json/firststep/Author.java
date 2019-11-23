@@ -1,29 +1,25 @@
 package org.agoncal.fascicle.json.firststep;
 
+import javax.json.bind.annotation.JsonbProperty;
+import javax.json.bind.annotation.JsonbTransient;
 import java.time.LocalDate;
 
 // @formatter:off
 // tag::adocSnippet[]
 public class Author {
 
-  private Long id;
+  @JsonbProperty("first-name")
   private String firstName;
+  @JsonbProperty(value="last-name", nillable=true)
   private String lastName;
   private String bio;
   private String email;
+  @JsonbTransient
   private LocalDate dateOfBirth;
 
   // Constructors, getters, setters
   // tag::adocSkip[]
   // @formatter:on
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
   public String getFirstName() {
     return firstName;
   }
