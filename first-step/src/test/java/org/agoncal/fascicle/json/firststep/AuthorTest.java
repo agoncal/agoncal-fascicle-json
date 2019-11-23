@@ -25,7 +25,8 @@ public class AuthorTest {
 
   @BeforeAll
   static void init() {
-    jsonb = JsonbBuilder.create();
+    JsonbConfig config = new JsonbConfig().withFormatting(true);
+    jsonb = JsonbBuilder.create(config);
   }
   // end::adocBegin[]
 
@@ -62,8 +63,6 @@ public class AuthorTest {
   @Test
   void output() {
     Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
-    JsonbConfig config = new JsonbConfig().withFormatting(true);
-    Jsonb jsonb = JsonbBuilder.create(config);
     String json = jsonb.toJson(author);
     System.out.println(json);
   }
