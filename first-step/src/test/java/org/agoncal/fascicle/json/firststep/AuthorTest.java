@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-
+import javax.json.bind.JsonbConfig;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -59,7 +59,16 @@ public class AuthorTest {
     // end::adocShouldNotMarshallAnAuthorWithTransientEmail[]
   }
 
-  private String jsonPath(String json, String jsonPath) {
+  @Test
+  void output() {
+    Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
+    JsonbConfig config = new JsonbConfig().withFormatting(true);
+    Jsonb jsonb = JsonbBuilder.create(config);
+    String json = jsonb.toJson(author);
+    System.out.println(json);
+  }
+
+    private String jsonPath(String json, String jsonPath) {
     return JsonPath.read(json, jsonPath);
   }
 }
