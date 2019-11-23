@@ -61,8 +61,9 @@ public class AuthorTest {
   void shouldNotMarshallAnAuthorWithTransientEmail() {
 
     // tag::adocShouldNotMarshallAnAuthorWithTransientEmail[]
-    Author author = new Author().firstName("Adams").lastName("Douglas").email("adams@douglas.co.uk");
+    Author author = new Author().email("adams@douglas.co.uk");
 
+    Jsonb jsonb = JsonbBuilder.create();
     String json = jsonb.toJson(author);
 
     JsonReader reader = Json.createReader(new StringReader(json));
