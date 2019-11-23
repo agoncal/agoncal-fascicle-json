@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,25 +37,26 @@ public class AuthorTest {
   void shouldMarshallAnAuthor() {
 
     // tag::adocShouldMarshallAnAuthor[]
-    Author author = new Author().firstName("Adams").lastName("Douglas");
+    Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
 
     String json = jsonb.toJson(author);
 
     assertEquals("Adams", jsonPath(json, "$.first-name"));
     assertEquals("Douglas", jsonPath(json, "$.last-name"));
+    assertEquals("11.03.1952", jsonPath(json, "$.dateOfBirth"));
     // end::adocShouldMarshallAnAuthor[]
   }
 
   @Test
-  void shouldNotMarshallAnAuthorWithTransientDateOfBirth() {
+  void shouldNotMarshallAnAuthorWithTransientEmail() {
 
-    // tag::adocShouldNotMarshallAnAuthorWithTransientDateOfBirth[]
-    Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.now());
+    // tag::adocShouldNotMarshallAnAuthorWithTransientEmail[]
+    Author author = new Author().firstName("Adams").lastName("Douglas").email("adams@douglas.co.uk");
 
     String json = jsonb.toJson(author);
 
-    assertThrows(PathNotFoundException.class, () -> jsonPath(json, "$.dateOfBirth"));
-    // end::adocShouldNotMarshallAnAuthorWithTransientDateOfBirth[]
+    assertThrows(PathNotFoundException.class, () -> jsonPath(json, "$.email"));
+    // end::adocShouldNotMarshallAnAuthorWithTransientEmail[]
   }
 
   private String jsonPath(String json, String jsonPath) {

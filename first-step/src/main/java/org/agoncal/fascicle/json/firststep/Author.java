@@ -1,5 +1,6 @@
 package org.agoncal.fascicle.json.firststep;
 
+import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbTransient;
 import java.time.LocalDate;
@@ -13,8 +14,9 @@ public class Author {
   @JsonbProperty(value="last-name", nillable=true)
   private String lastName;
   private String bio;
-  private String email;
   @JsonbTransient
+  private String email;
+  @JsonbDateFormat("dd.MM.yyyy")
   private LocalDate dateOfBirth;
 
   // Constructors, getters, setters
