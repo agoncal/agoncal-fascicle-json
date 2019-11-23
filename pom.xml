@@ -26,6 +26,7 @@
     <version.yasson>1.0</version.yasson>
     <version.json>1.1</version.json>
     <!-- Other -->
+    <version.slf4j>2.12.1</version.slf4j>
     <version.jersey>2.26-b03</version.jersey>
     <version.jpa-api>2.2</version.jpa-api>
     <!-- Test -->
@@ -94,6 +95,11 @@
         <version>${version.json}</version>
       </dependency>
       <!-- Other -->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${version.slf4j}</version>
+      </dependency>
       <dependency>
         <groupId>javax.persistence</groupId>
         <artifactId>javax.persistence-api</artifactId>

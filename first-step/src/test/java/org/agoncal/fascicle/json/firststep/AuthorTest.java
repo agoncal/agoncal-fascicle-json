@@ -1,12 +1,13 @@
 package org.agoncal.fascicle.json.firststep;
 
+import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Antonio Goncalves
@@ -37,7 +38,13 @@ public class AuthorTest {
     String result = jsonb.toJson(author);
     System.out.println(result);
 
-    assertNotNull(author.getId(), "Id should not be null");
+    assertEquals("Adams", jsonPath(result, "$.firstName"));
+    assertEquals("Douglas", jsonPath(result, "$.lastName"));
     // end::adocShouldCreateAnAuthor[]
   }
+
+  private String jsonPath(String json, String jsonPath) {
+    return JsonPath.read(json, jsonPath);
+  }
+
 }
