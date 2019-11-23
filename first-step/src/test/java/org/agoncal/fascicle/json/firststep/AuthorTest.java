@@ -33,28 +33,28 @@ public class AuthorTest {
   // ======================================
 
   @Test
-  void shouldCreateAnAuthor() {
+  void shouldMarshallAnAuthor() {
 
-    // tag::adocShouldCreateAnAuthor[]
+    // tag::adocShouldMarshallAnAuthor[]
     Author author = new Author().firstName("Adams").lastName("Douglas");
 
     String json = jsonb.toJson(author);
 
     assertEquals("Adams", jsonPath(json, "$.first-name"));
     assertEquals("Douglas", jsonPath(json, "$.last-name"));
-    // end::adocShouldCreateAnAuthor[]
+    // end::adocShouldMarshallAnAuthor[]
   }
 
   @Test
-  void shouldNotCreateAnAuthorWithTransientDateOfBirth() {
+  void shouldNotMarshallAnAuthorWithTransientDateOfBirth() {
 
-    // tag::adocShouldNotCreateAnAuthorWithTransientDateOfBirth[]
+    // tag::adocShouldNotMarshallAnAuthorWithTransientDateOfBirth[]
     Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.now());
 
     String json = jsonb.toJson(author);
 
     assertThrows(PathNotFoundException.class, () -> jsonPath(json, "$.dateOfBirth"));
-    // end::adocShouldNotCreateAnAuthorWithTransientDateOfBirth[]
+    // end::adocShouldNotMarshallAnAuthorWithTransientDateOfBirth[]
   }
 
   private String jsonPath(String json, String jsonPath) {
