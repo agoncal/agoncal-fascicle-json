@@ -25,11 +25,11 @@ public class StringJsonParser {
 
   public JsonParser parseStringProperties() {
     Map properties = null;
-    // tag::adocsnippet2[]
+    // tag::adocSnippet2[]
     StringReader reader = new StringReader("{'hello', 'world'}");
     JsonParserFactory factory = Json.createParserFactory(properties);
     JsonParser parser = factory.createParser(reader);
-    // end::adocsnippet2[]
+    // end::adocSnippet2[]
     return parser;
   }
 
