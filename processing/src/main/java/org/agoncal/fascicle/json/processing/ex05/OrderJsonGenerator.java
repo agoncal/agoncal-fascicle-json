@@ -15,7 +15,7 @@ public class OrderJsonGenerator {
     System.out.println(new OrderJsonGenerator().generatePurchaseOrder());
   }
 
-  // tag::adocsnippet[]
+  // tag::adocSnippet[]
   public StringWriter generatePurchaseOrder() throws IOException {
     StringWriter writer = new StringWriter();
     JsonGenerator generator = Json.createGenerator(writer);
@@ -50,5 +50,5 @@ public class OrderJsonGenerator {
       .close();
     return writer;
   }
-  // end::adocsnippet[]
+  // end::adocSnippet[]
 }

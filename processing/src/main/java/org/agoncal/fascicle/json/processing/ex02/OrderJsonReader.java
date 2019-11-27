@@ -14,11 +14,11 @@ import java.io.FileReader;
 public class OrderJsonReader {
 
   public JsonObject readPurchaseOrder() throws FileNotFoundException {
-    // tag::adocsnippet[]
+    // tag::adocSnippet[]
     JsonReader reader = Json.createReader(new FileReader("src/main/resources/order.json"));
     JsonObject jsonObject = reader.readObject();
     jsonObject = jsonObject.getJsonObject("order");
-    // end::adocsnippet[]
+    // end::adocSnippet[]
     return jsonObject;
   }
 

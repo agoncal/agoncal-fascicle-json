@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- tag::adocsnippet[] -->
+<!-- tag::adocSnippet[] -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -7,7 +7,7 @@
   <groupId>org.agoncal.fascicle.json</groupId>
   <artifactId>putting-together</artifactId>
   <version>1.1</version>
-  <!-- tag::adocskip[] -->
+  <!-- tag::adocSkip[] -->
   <name>JSON Processing and Binding :: Putting It All Together</name>
 
   <parent>
@@ -22,7 +22,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-  <!-- end::adocskip[] -->
+  <!-- end::adocSkip[] -->
 
   <dependencies>
     <!-- JSON-P -->
@@ -51,4 +51,4 @@
     </plugins>
   </build>
 </project>
-  <!-- end::adocsnippet[] -->
+  <!-- end::adocSnippet[] -->

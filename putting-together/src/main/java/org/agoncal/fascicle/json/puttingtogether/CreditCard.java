@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.*;
  *         http://www.antoniogoncalves.org
  *         --
  */
-// tag::adocsnippet[]
+// tag::adocSnippet[]
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CreditCard {
@@ -21,7 +21,7 @@ public class CreditCard {
   private String type;
 
   // Constructors, getters, setters
-  // tag::adocskip[]
+  // tag::adocSkip[]
 
   public CreditCard() {
   }
@@ -93,6 +93,6 @@ public class CreditCard {
     result = 31 * result + (type != null ? type.hashCode() : 0);
     return result;
   }
-  // end::adocskip[]
+  // end::adocSkip[]
 }
-// end::adocsnippet[]
+// end::adocSnippet[]

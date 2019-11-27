@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocsnippet[]
+// tag::adocSnippet[]
 public class CreditCardJSonTest {
 
   public static final String CREDIT_CARD_JSON =
@@ -45,4 +45,4 @@ public class CreditCardJSonTest {
     assertEquals(CREDIT_CARD_JSON, writer.toString().trim());
   }
 }
-// end::adocsnippet[]
+// end::adocSnippet[]

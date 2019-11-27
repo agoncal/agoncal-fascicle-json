@@ -8,7 +8,7 @@ import javax.json.JsonObject;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocsnippet[]
+// tag::adocSnippet[]
 public class OrderJsonBuilder {
 
   public JsonObject buildPurchaseOrder() {
@@ -36,12 +36,12 @@ public class OrderJsonBuilder {
         .add("@control_number", "234")
         .add("@type", "Visa"))).build();
   }
-  // tag::adocskip[]
+  // tag::adocSkip[]
 
   public static void main(String[] args) {
     System.out.println(new OrderJsonBuilder().buildPurchaseOrder());
   }
 
-  // end::adocskip[]
+  // end::adocSkip[]
 }
-// end::adocsnippet[]
+// end::adocSnippet[]

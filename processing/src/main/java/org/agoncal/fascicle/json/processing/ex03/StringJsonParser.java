@@ -16,10 +16,10 @@ import java.util.Map;
 public class StringJsonParser {
 
   public JsonParser parseString() {
-    // tag::adocsnippet[]
+    // tag::adocSnippet[]
     StringReader reader = new StringReader("{'hello', 'world'}");
     JsonParser parser = Json.createParser(reader);
-    // end::adocsnippet[]
+    // end::adocSnippet[]
     return parser;
   }
 

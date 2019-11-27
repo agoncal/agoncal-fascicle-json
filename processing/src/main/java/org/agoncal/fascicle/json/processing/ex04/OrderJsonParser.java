@@ -10,7 +10,7 @@ import java.io.FileReader;
  *         http://www.antoniogoncalves.org
  *         --
  */
-// tag::adocsnippet[]
+// tag::adocSnippet[]
 public class OrderJsonParser {
 
   public String parsePurchaseOrderAndReturnEmail() throws FileNotFoundException {
@@ -30,12 +30,12 @@ public class OrderJsonParser {
     }
     return email;
   }
-  // tag::adocskip[]
+  // tag::adocSkip[]
 
   public static void main(String[] args) throws FileNotFoundException {
     System.out.println(new OrderJsonParser().parsePurchaseOrderAndReturnEmail());
   }
 
-  // end::adocskip[]
+  // end::adocSkip[]
 }
-// end::adocsnippet[]
+// end::adocSnippet[]
