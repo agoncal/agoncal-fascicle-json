@@ -1,4 +1,4 @@
-package org.agoncal.fascicle.json.processing.ex04;
+package org.agoncal.fascicle.json.processing;
 
 import javax.json.Json;
 import javax.json.stream.JsonParser;

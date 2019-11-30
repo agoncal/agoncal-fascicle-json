@@ -5,7 +5,11 @@ import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbTransient;
 import java.time.LocalDate;
 
-// @formatter:off
+/**
+ * @author Antonio Goncalves
+ * http://www.antoniogoncalves.org
+ * --
+ */
 // tag::adocSnippet[]
 public class Author {
 
@@ -21,7 +25,11 @@ public class Author {
 
   // Constructors, getters, setters
   // tag::adocSkip[]
-  // @formatter:on
+
+  // ======================================
+  // =          Getters & Setters         =
+  // ======================================
+
   public String getFirstName() {
     return firstName;
   }

@@ -1,6 +1,7 @@
-package org.agoncal.fascicle.json.processing.ex01;
+package org.agoncal.fascicle.json.processing;
 
 
+import org.agoncal.fascicle.json.processing.OrderJsonBuilder;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

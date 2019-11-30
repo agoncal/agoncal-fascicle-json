@@ -1,6 +1,7 @@
-package org.agoncal.fascicle.json.processing.ex02;
+package org.agoncal.fascicle.json.processing;
 
 
+import org.agoncal.fascicle.json.processing.OrderJsonReader;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
