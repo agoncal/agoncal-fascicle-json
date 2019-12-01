@@ -22,20 +22,31 @@
   </properties>
 
   <dependencies>
-    <!-- JSON-P -->
+<!--    <dependency>-->
+<!--      <groupId>javax.json.bind</groupId>-->
+<!--      <artifactId>javax.json.bind-api</artifactId>-->
+<!--    </dependency>-->
     <dependency>
-      <groupId>javax.json</groupId>
-      <artifactId>javax.json-api</artifactId>
+      <groupId>org.eclipse</groupId>
+      <artifactId>yasson</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>javax.json</artifactId>
-    </dependency>
-
+<!--    <dependency>-->
+<!--      <groupId>org.glassfish</groupId>-->
+<!--      <artifactId>javax.json</artifactId>-->
+<!--    </dependency>-->
     <!-- Test -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

@@ -36,7 +36,7 @@ public class AuthorTest {
   // end::adocBegin[]
 
   // ======================================
-  // =              Methods               =
+  // =              Unit tests            =
   // ======================================
 
   @Test
