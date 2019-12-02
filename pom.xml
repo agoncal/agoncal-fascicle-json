@@ -23,7 +23,7 @@
     <!-- JSON-P and JSON-B -->
     <version.json-b>1.0</version.json-b>
     <version.json-api>1.1</version.json-api>
-    <version.yasson>1.0</version.yasson>
+    <version.yasson>1.0.5</version.yasson>
     <version.json>1.1</version.json>
     <!-- Other -->
     <version.slf4j>2.12.1</version.slf4j>

@@ -2,6 +2,7 @@ package org.agoncal.fascicle.json.firststep;
 
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,12 @@ import javax.json.JsonReader;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.time.LocalDate;
 
@@ -35,12 +42,25 @@ public class AuthorTest {
   }
   // end::adocBegin[]
 
+  static BufferedWriter bw;
+  @BeforeAll
+  static void initFile() throws FileNotFoundException {
+    File fout = new File("out.json");
+    FileOutputStream fos = new FileOutputStream(fout);
+    bw = new BufferedWriter(new OutputStreamWriter(fos));
+  }
+
+  @AfterAll
+  static void closeFile() throws IOException {
+    bw.close();
+  }
+
   // ======================================
   // =              Unit tests            =
   // ======================================
 
   @Test
-  void shouldMarshallAnAuthor() {
+  void shouldMarshallAnAuthor() throws IOException {
 
     // tag::adocShouldMarshallAnAuthor[]
     Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
@@ -48,6 +68,9 @@ public class AuthorTest {
     Jsonb jsonb = JsonbBuilder.create();
     String json = jsonb.toJson(author);
 
+    // tag::adocSkip[]
+    output(json, "adocShouldMarshallAnAuthor");
+    // end::adocSkip[]
     JsonReader reader = Json.createReader(new StringReader(json));
     JsonObject jsonObject = reader.readObject();
 
@@ -100,10 +123,11 @@ public class AuthorTest {
   }
 
   @Test
-  void output() {
-    Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
-    String json = jsonb.toJson(author);
-    System.out.println(json);
+  void output(String json, String tag) throws IOException {
+    bw.write("// tag::" + tag + "[]\n");
+    bw.write(json);
+    bw.write("\n");
+    bw.write("// and::" + tag + "[]\n");
   }
 
   private String jsonPath(String json, String jsonPath) {

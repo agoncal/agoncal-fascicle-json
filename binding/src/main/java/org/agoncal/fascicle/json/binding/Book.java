@@ -86,10 +86,10 @@ public class Book {
     this.isbn = isbn;
   }
 
-//  public Book isbn(String isbn) {
-//    this.isbn = isbn;
-//    return this;
-//  }
+  public Book isbn(String isbn) {
+    this.isbn = isbn;
+    return this;
+  }
 
   public Integer getNbOfPages() {
     return nbOfPages;
