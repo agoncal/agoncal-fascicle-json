@@ -45,7 +45,7 @@ public class AuthorTest {
   static BufferedWriter bw;
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    File fout = new File("out.json");
+    File fout = new File("src/test/java/org/agoncal/fascicle/json/firststep/AuthorTest.json");
     FileOutputStream fos = new FileOutputStream(fout);
     bw = new BufferedWriter(new OutputStreamWriter(fos));
   }
@@ -122,8 +122,7 @@ public class AuthorTest {
     // end::adocShouldNotMarshallAnAuthorWithTransientEmailWithPath[]
   }
 
-  @Test
-  void output(String json, String tag) throws IOException {
+  private void output(String json, String tag) throws IOException {
     bw.write("// tag::" + tag + "[]\n");
     bw.write(json);
     bw.write("\n");

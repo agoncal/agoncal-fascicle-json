@@ -1,5 +1,7 @@
+// tag::adocShouldMarshallAnAuthor[]
 {
   "dateOfBirth": "11.03.1952",
   "first-name": "Adams",
   "last-name": "Douglas"
 }
+// and::adocShouldMarshallAnAuthor[]
