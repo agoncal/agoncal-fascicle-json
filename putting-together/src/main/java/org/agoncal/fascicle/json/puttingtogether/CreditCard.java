@@ -1,6 +1,5 @@
 package org.agoncal.fascicle.json.puttingtogether;
 
-import javax.xml.bind.annotation.*;
 
 /**
  * @author Antonio Goncalves
@@ -8,15 +7,10 @@ import javax.xml.bind.annotation.*;
  *         --
  */
 // tag::adocSnippet[]
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
 public class CreditCard {
 
-  @XmlAttribute
   private String number;
-  @XmlElement(name = "expiry_date")
   private String expiryDate;
-  @XmlElement(name = "control_number")
   private Integer controlNumber;
   private String type;
 

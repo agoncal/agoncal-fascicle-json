@@ -19,7 +19,8 @@
   </modules>
 
   <properties>
-    <version.java>1.8</version.java>
+    <version.java>11</version.java>
+    <version.maven>3.0.5</version.maven>
     <!-- JSON-P and JSON-B -->
     <version.json-b>1.0</version.json-b>
     <version.json-api>1.1</version.json-api>
@@ -40,7 +41,7 @@
     <version.compiler.plugin>3.8.1</version.compiler.plugin>
     <version.dependency.plugin>3.1.1</version.dependency.plugin>
     <version.deploy.plugin>3.0.0-M1</version.deploy.plugin>
-    <version.enforcer.plugin>3.0.0-M3</version.enforcer.plugin>
+    <version.enforcer.plugin>3.0.0-M1</version.enforcer.plugin>
     <version.exec.plugin>1.6.0</version.exec.plugin>
     <version.failsafe.plugin>${version.surefire.plugin}</version.failsafe.plugin>
     <version.help.plugin>3.2.0</version.help.plugin>
@@ -61,14 +62,13 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
 
     <!-- Project -->
-    <maven.compiler.source>${version.java}</maven.compiler.source>
-    <maven.compiler.target>${version.java}</maven.compiler.target>
+    <maven.compiler.release>${version.java}</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <prerequisites>
-    <maven>3.0.5</maven>
+    <maven>${version.maven}</maven>
   </prerequisites>
 
   <dependencyManagement>
@@ -166,8 +166,7 @@
           <version>${version.compiler.plugin}</version>
           <inherited>true</inherited>
           <configuration>
-            <source>${version.java}</source>
-            <target>${version.java}</target>
+            <release>${version.java}</release>
           </configuration>
         </plugin>
         <plugin>
@@ -188,21 +187,16 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>${version.enforcer.plugin}</version>
-          <executions>
-            <execution>
-              <id>enforce-maven</id>
-              <goals>
-                <goal>enforce</goal>
-              </goals>
-              <configuration>
-                <rules>
-                  <requireMavenVersion>
-                    <version>3.0.5</version>
-                  </requireMavenVersion>
-                </rules>
-              </configuration>
-            </execution>
-          </executions>
+          <configuration>
+            <rules>
+              <requireMavenVersion>
+                <version>${version.maven}</version>
+              </requireMavenVersion>
+              <requireJavaVersion>
+                <version>11</version>
+              </requireJavaVersion>
+            </rules>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
