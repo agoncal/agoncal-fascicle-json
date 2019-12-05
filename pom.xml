@@ -193,7 +193,7 @@
                 <version>${version.maven}</version>
               </requireMavenVersion>
               <requireJavaVersion>
-                <version>11</version>
+                <version>${version.java}</version>
               </requireJavaVersion>
             </rules>
           </configuration>
