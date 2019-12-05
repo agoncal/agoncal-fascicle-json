@@ -36,23 +36,14 @@ public class BookTest {
     String json = jsonb.toJson(book);
     System.out.println(json);
     assertEquals("The Hitchhiker's Guide to the Galaxy", jsonPath(json, "$.book_title"));
-    assertEquals(new Double(12.5F), jsonPathDouble(json, "$.price"));
+    assertEquals(12.5, jsonPath(json, "$.price"));
     assertEquals("The Hitchhiker's Guide to the Galaxy is a science fiction comedy series created by Douglas Adams.", jsonPath(json, "$.desc"));
     assertEquals("1-84023-742-2", jsonPath(json, "$.isbn"));
-    assertEquals(new Integer(354), jsonPathInt(json, "$.nb_of_pages"));
-    assertEquals(new Boolean(false), jsonPathBool(json, "$.illustrations"));
+    assertEquals(354, jsonPath(json, "$.nb_of_pages"));
+    assertEquals(Boolean.FALSE, jsonPath(json, "$.illustrations"));
   }
 
-  private String jsonPath(String json, String jsonPath) {
-    return JsonPath.read(json, jsonPath);
-  }
-  private Double jsonPathDouble(String json, String jsonPath) {
-    return JsonPath.read(json, jsonPath);
-  }
-  private Integer jsonPathInt(String json, String jsonPath) {
-    return JsonPath.read(json, jsonPath);
-  }
-  private Boolean jsonPathBool(String json, String jsonPath) {
+  private Object jsonPath(String json, String jsonPath) {
     return JsonPath.read(json, jsonPath);
   }
 }

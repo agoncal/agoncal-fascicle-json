@@ -37,10 +37,10 @@ public class BookTest {
     String json = jsonb.toJson(book);
 
     assertEquals("H2G2", jsonPath(json, "$.title"));
-    assertEquals("12.5", jsonPath(json, "$.price"));
-    assertEquals("11-84023-742-2", jsonPath(json, "$.isbn"));
-    assertEquals("354", jsonPath(json, "$.nbOfPages"));
-    assertEquals("false", jsonPath(json, "$.illustrations"));
+    assertEquals(12.5, jsonPath(json, "$.price"));
+    assertEquals("1-84023-742-2", jsonPath(json, "$.isbn"));
+    assertEquals(354, jsonPath(json, "$.nbOfPages"));
+    assertEquals(Boolean.FALSE, jsonPath(json, "$.illustrations"));
     assertEquals("Best Sci-fi book ever", jsonPath(json, "$.description"));
   }
 
@@ -51,7 +51,7 @@ public class BookTest {
     System.out.println(json);
   }
 
-  private String jsonPath(String json, String jsonPath) {
+  private Object jsonPath(String json, String jsonPath) {
     return JsonPath.read(json, jsonPath);
   }
 }

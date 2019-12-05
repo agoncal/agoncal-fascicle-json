@@ -129,7 +129,7 @@ public class AuthorTest {
     bw.write("// and::" + tag + "[]\n");
   }
 
-  private String jsonPath(String json, String jsonPath) {
+  private Object jsonPath(String json, String jsonPath) {
     return JsonPath.read(json, jsonPath);
   }
 }
