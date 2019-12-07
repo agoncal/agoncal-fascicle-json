@@ -31,7 +31,7 @@ public class UtilTest {
     bw.write("// tag::" + tag + "[]\n");
     bw.write(json);
     bw.write("\n");
-    bw.write("// and::" + tag + "[]\n");
+    bw.write("// end::" + tag + "[]\n");
   }
 
   public static Object jsonPath(String json, String jsonPath) {

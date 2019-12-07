@@ -4,4 +4,4 @@
   "first-name": "Adams",
   "last-name": "Douglas"
 }
-// and::adocShouldMarshallAnAuthor[]
+// end::adocShouldMarshallAnAuthor[]
