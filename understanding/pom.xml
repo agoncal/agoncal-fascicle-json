@@ -36,6 +36,12 @@
     </dependency>
     <!-- Test -->
     <dependency>
+      <groupId>org.agoncal.fascicle.json</groupId>
+      <artifactId>commons</artifactId>
+      <version>${version}</version>
+      <type>test-jar</type>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
     </dependency>
