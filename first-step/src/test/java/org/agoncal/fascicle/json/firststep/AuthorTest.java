@@ -61,21 +61,21 @@ public class AuthorTest {
   void shouldMarshallAnAuthor() throws IOException {
 
     // tag::adocShouldMarshallAnAuthor[]
-    Author author = new Author().firstName("Adams").lastName("Douglas").dateOfBirth(LocalDate.of(1952, 03, 11));
+    Author author = new Author().firstName("Adams").lastName("Douglas").email("adams@douglas.com").dateOfBirth(LocalDate.of(1952, 03, 11));
 
     Jsonb jsonb = JsonbBuilder.create();
     String json = jsonb.toJson(author);
 
-    // tag::adocSkip[]
+    System.out.println(json);
+    // end::adocShouldMarshallAnAuthor[]
+
     output(bw, json, "adocShouldMarshallAnAuthor");
-    // end::adocSkip[]
     JsonReader reader = Json.createReader(new StringReader(json));
     JsonObject jsonObject = reader.readObject();
 
     assertEquals("Adams", jsonObject.getString("first-name"));
     assertEquals("Douglas", jsonObject.getString("last-name"));
     assertEquals("11.03.1952", jsonObject.getString("dateOfBirth"));
-    // end::adocShouldMarshallAnAuthor[]
   }
 
   @Test
