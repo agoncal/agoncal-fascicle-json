@@ -10,6 +10,7 @@
 
   <modules>
     <module>binding</module>
+    <module>commons</module>
     <module>first-step</module>
     <module>getting-started</module>
     <module>jsonpath</module>

@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.agoncal.fascicle.json</groupId>
-  <artifactId>first-step</artifactId>
+  <artifactId>commons</artifactId>
   <version>1.1</version>
-  <name>JSON Processing and Binding :: First Step</name>
+  <name>JSON Processing and Binding :: Commons</name>
 
   <parent>
     <groupId>org.agoncal.fascicle</groupId>
@@ -22,25 +22,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>javax.json.bind</groupId>
-      <artifactId>javax.json.bind-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse</groupId>
-      <artifactId>yasson</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>javax.json</artifactId>
-    </dependency>
     <!-- Test -->
-    <dependency>
-      <groupId>org.agoncal.fascicle.json</groupId>
-      <artifactId>commons</artifactId>
-      <version>${version}</version>
-      <type>test-jar</type>
-    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>

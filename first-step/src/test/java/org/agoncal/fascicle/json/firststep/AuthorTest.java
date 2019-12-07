@@ -1,6 +1,5 @@
 package org.agoncal.fascicle.json.firststep;
 
-import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,14 +12,14 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.time.LocalDate;
 
+import static org.agoncal.fascicle.json.UtilTest.initBufferedWriter;
+import static org.agoncal.fascicle.json.UtilTest.jsonPath;
+import static org.agoncal.fascicle.json.UtilTest.output;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -43,11 +42,10 @@ public class AuthorTest {
   // end::adocBegin[]
 
   static BufferedWriter bw;
+
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    File fout = new File("src/test/java/org/agoncal/fascicle/json/firststep/AuthorTest.json");
-    FileOutputStream fos = new FileOutputStream(fout);
-    bw = new BufferedWriter(new OutputStreamWriter(fos));
+    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/firststep/AuthorTest.json");
   }
 
   @AfterAll
@@ -69,7 +67,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
 
     // tag::adocSkip[]
-    output(json, "adocShouldMarshallAnAuthor");
+    output(bw, json, "adocShouldMarshallAnAuthor");
     // end::adocSkip[]
     JsonReader reader = Json.createReader(new StringReader(json));
     JsonObject jsonObject = reader.readObject();
@@ -120,16 +118,5 @@ public class AuthorTest {
 
     assertThrows(PathNotFoundException.class, () -> jsonPath(json, "$.email"));
     // end::adocShouldNotMarshallAnAuthorWithTransientEmailWithPath[]
-  }
-
-  private void output(String json, String tag) throws IOException {
-    bw.write("// tag::" + tag + "[]\n");
-    bw.write(json);
-    bw.write("\n");
-    bw.write("// and::" + tag + "[]\n");
-  }
-
-  private Object jsonPath(String json, String jsonPath) {
-    return JsonPath.read(json, jsonPath);
   }
 }
