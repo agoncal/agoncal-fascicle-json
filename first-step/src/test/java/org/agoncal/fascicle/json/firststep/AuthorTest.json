@@ -1,7 +1,7 @@
 // tag::adocShouldMarshallAnAuthor[]
 {
   "dateOfBirth": "11.03.1952",
-  "first-name": "Adams",
-  "last-name": "Douglas"
+  "first_name": "Adams",
+  "last_name": "Douglas"
 }
 // end::adocShouldMarshallAnAuthor[]

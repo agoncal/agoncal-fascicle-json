@@ -73,8 +73,8 @@ public class AuthorTest {
     JsonReader reader = Json.createReader(new StringReader(json));
     JsonObject jsonObject = reader.readObject();
 
-    assertEquals("Adams", jsonObject.getString("first-name"));
-    assertEquals("Douglas", jsonObject.getString("last-name"));
+    assertEquals("Adams", jsonObject.getString("first_name"));
+    assertEquals("Douglas", jsonObject.getString("last_name"));
     assertEquals("11.03.1952", jsonObject.getString("dateOfBirth"));
   }
 
@@ -102,8 +102,8 @@ public class AuthorTest {
 
     String json = jsonb.toJson(author);
 
-    assertEquals("Adams", jsonPath(json, "$.first-name"));
-    assertEquals("Douglas", jsonPath(json, "$.last-name"));
+    assertEquals("Adams", jsonPath(json, "$.first_name"));
+    assertEquals("Douglas", jsonPath(json, "$.last_name"));
     assertEquals("11.03.1952", jsonPath(json, "$.dateOfBirth"));
     // end::adocShouldMarshallAnAuthorWithPath[]
   }

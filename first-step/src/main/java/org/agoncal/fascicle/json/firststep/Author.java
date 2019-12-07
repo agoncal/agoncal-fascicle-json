@@ -13,9 +13,9 @@ import java.time.LocalDate;
 // tag::adocSnippet[]
 public class Author {
 
-  @JsonbProperty("first-name")
+  @JsonbProperty("first_name")
   private String firstName;
-  @JsonbProperty(value="last-name", nillable=true)
+  @JsonbProperty(value="last_name", nillable=true)
   private String lastName;
   private String bio;
   @JsonbTransient
