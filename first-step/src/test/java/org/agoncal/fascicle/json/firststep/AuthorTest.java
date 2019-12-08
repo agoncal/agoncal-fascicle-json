@@ -45,7 +45,7 @@ public class AuthorTest {
 
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/firststep/AuthorTest.json");
+    bw = initBufferedWriter("src/main/java/org/agoncal/fascicle/json/firststep/Author.json");
   }
 
   @AfterAll

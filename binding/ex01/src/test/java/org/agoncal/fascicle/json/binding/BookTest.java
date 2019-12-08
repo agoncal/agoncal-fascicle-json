@@ -34,7 +34,7 @@ public class BookTest {
 
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/binding/BookTest.json");
+    bw = initBufferedWriter("src/main/java/org/agoncal/fascicle/json/binding/Book.json");
   }
 
   @AfterAll

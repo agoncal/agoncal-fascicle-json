@@ -42,7 +42,7 @@ public class PurchaseOrderTest {
 
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/understanding/PurchaseOrderTest.json");
+    bw = initBufferedWriter("src/main/java/org/agoncal/fascicle/json/understanding/PurchaseOrder.json");
   }
 
   @AfterAll
