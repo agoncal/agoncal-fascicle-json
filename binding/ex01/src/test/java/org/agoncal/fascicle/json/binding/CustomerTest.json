@@ -1,0 +1,10 @@
+// tag::adocShouldMarshallACustomer[]
+{
+  "creationDate": "2019-12-08T16:43:28.97864",
+  "dateOfBirth": "2019-12-08",
+  "email": "jsmith@gmail.com",
+  "firstName": "John",
+  "lastName": "Smith",
+  "phoneNumber": "1234565"
+}
+// end::adocShouldMarshallACustomer[]

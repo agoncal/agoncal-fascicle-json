@@ -10,6 +10,8 @@ import javax.json.bind.JsonbBuilder;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import static org.agoncal.fascicle.json.UtilTest.initBufferedWriter;
 import static org.agoncal.fascicle.json.UtilTest.jsonPath;
@@ -21,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * http://www.antoniogoncalves.org
  * --
  */
-public class BookTest {
+public class CustomerTest {
 
   private static Jsonb jsonb;
 
@@ -34,7 +36,7 @@ public class BookTest {
 
   @BeforeAll
   static void initFile() throws FileNotFoundException {
-    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/binding/BookTest.json");
+    bw = initBufferedWriter("src/test/java/org/agoncal/fascicle/json/binding/CustomerTest.json");
   }
 
   @AfterAll
@@ -46,17 +48,15 @@ public class BookTest {
   // =              Unit tests            =
   // ======================================
   @Test
-  public void shouldMarshallAnAuthor() throws Exception {
+  public void shouldMarshallACustomer() throws Exception {
 
-    Book book = new Book("H2G2", 12.5F, "The Hitchhiker's Guide to the Galaxy", "1-84023-742-2", 354, false);
-    String json = jsonb.toJson(book);
-    output(bw, json, "adocShouldMarshallAnAuthor");
+    Customer customer = new Customer("John", "Smith", "jsmith@gmail.com", "1234565", LocalDate.now(), LocalDateTime.now());
+    String json = jsonb.toJson(customer);
+    output(bw, json, "adocShouldMarshallACustomer");
 
-    assertEquals("H2G2", jsonPath(json, "$.book_title"));
-    assertEquals(12.5, jsonPath(json, "$.price"));
-    assertEquals("The Hitchhiker's Guide to the Galaxy", jsonPath(json, "$.desc"));
-    assertEquals("1-84023-742-2", jsonPath(json, "$.isbn"));
-    assertEquals(354, jsonPath(json, "$.nb_of_pages"));
-    assertEquals(Boolean.FALSE, jsonPath(json, "$.illustrations"));
+    assertEquals("John", jsonPath(json, "$.firstName"));
+    assertEquals("Smith", jsonPath(json, "$.lastName"));
+    assertEquals("jsmith@gmail.com", jsonPath(json, "$.email"));
+    assertEquals("1234565", jsonPath(json, "$.phoneNumber"));
   }
 }
