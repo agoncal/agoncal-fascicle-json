@@ -4,6 +4,7 @@ import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbTransient;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author Antonio Goncalves
@@ -23,8 +24,11 @@ public class Customer {
   @JsonbTransient
   private Integer age;
   // end::adocSkiptransient[]
-  @JsonbDateFormat
   private LocalDateTime creationDate;
+  @JsonbDateFormat
+  private LocalDateTime updateDate;
+  @JsonbDateFormat
+  private Date deleteDate;
 
   // Constructors, getters, setters
   // tag::adocSkip[]
@@ -99,6 +103,22 @@ public class Customer {
 
   public void setCreationDate(LocalDateTime creationDate) {
     this.creationDate = creationDate;
+  }
+
+  public LocalDateTime getUpdateDate() {
+    return updateDate;
+  }
+
+  public void setUpdateDate(LocalDateTime updateDate) {
+    this.updateDate = updateDate;
+  }
+
+  public Date getDeleteDate() {
+    return deleteDate;
+  }
+
+  public void setDeleteDate(Date deleteDate) {
+    this.deleteDate = deleteDate;
   }
   // end::adocSkip[]
 }
