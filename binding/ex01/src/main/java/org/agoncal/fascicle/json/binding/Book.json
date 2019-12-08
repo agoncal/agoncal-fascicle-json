@@ -1,3 +1,10 @@
 // tag::adocShouldMarshallAnAuthor[]
-{"book_title":"H2G2","desc":"The Hitchhiker's Guide to the Galaxy","illustrations":false,"isbn":"1-84023-742-2","nb_of_pages":354,"price":12.5}
+{
+  "book_title": "H2G2",
+  "desc": "The Hitchhiker's Guide to the Galaxy",
+  "illustrations": false,
+  "isbn": "1-84023-742-2",
+  "nb_of_pages": 354,
+  "price": 12.5
+}
 // end::adocShouldMarshallAnAuthor[]

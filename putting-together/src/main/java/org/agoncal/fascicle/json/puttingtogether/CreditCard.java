@@ -3,8 +3,8 @@ package org.agoncal.fascicle.json.puttingtogether;
 
 /**
  * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * http://www.antoniogoncalves.org
+ * --
  */
 // tag::adocSnippet[]
 public class CreditCard {

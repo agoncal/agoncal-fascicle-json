@@ -3,6 +3,7 @@
 @Retention(RUNTIME)
 public @interface JsonbProperty {
 
-  String  value()    default "";
+  String value() default "";
+
   boolean nillable() default false;
 }

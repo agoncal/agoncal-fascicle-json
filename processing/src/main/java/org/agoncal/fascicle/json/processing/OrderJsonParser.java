@@ -7,8 +7,8 @@ import java.io.FileReader;
 
 /**
  * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * http://www.antoniogoncalves.org
+ * --
  */
 // tag::adocSnippet[]
 public class OrderJsonParser {

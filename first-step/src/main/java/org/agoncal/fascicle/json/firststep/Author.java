@@ -15,7 +15,7 @@ public class Author {
 
   @JsonbProperty("first_name")
   private String firstName;
-  @JsonbProperty(value="last_name", nillable=true)
+  @JsonbProperty(value = "last_name", nillable = true)
   private String lastName;
   private String bio;
   @JsonbTransient

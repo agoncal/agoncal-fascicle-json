@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * http://www.antoniogoncalves.org
+ * --
  */
 public class OrderJsonParserTest {
 
