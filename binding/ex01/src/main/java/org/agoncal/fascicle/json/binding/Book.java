@@ -16,7 +16,7 @@ public class Book {
   @JsonbProperty(value = "desc")
   private String description;
   private String isbn;
-  @JsonbProperty(value = "nb_of_pages", nillable = false)
+  @JsonbProperty(value = "nb_of_pages", nillable = true)
   private Integer nbOfPages;
   private Boolean illustrations;
 
