@@ -56,7 +56,7 @@ public class CDTest {
     CD cd = new CD("Zoot Allures", 12.5F, "Released in October 1976", tracks);
 
     String json = jsonb.toJson(cd);
-    output(bw, json, "shouldMarshallABookWithTags");
+    output(bw, json, "shouldMarshallACDWithAMapOfTracks");
 
     assertEquals("Zoot Allures", jsonPath(json, "$.title"));
     assertEquals(12.5, jsonPath(json, "$.price"));

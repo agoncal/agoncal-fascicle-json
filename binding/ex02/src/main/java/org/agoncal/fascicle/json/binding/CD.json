@@ -1,4 +1,4 @@
-// tag::shouldMarshallABookWithTags[]
+// tag::shouldMarshallACDWithAMapOfTracks[]
 {
   "description": "Released in October 1976",
   "price": 12.5,
@@ -9,4 +9,4 @@
     "3": "The Torture Never Stops"
   }
 }
-// end::shouldMarshallABookWithTags[]
+// end::shouldMarshallACDWithAMapOfTracks[]
