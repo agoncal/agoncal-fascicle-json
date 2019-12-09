@@ -18,16 +18,15 @@ public class Customer {
   private String lastName;
   private String email;
   private String phoneNumber;
-  @JsonbDateFormat
+  @JsonbDateFormat("dd/MM/yyyy")
   private LocalDate dateOfBirth;
   // tag::adocSkiptransient[]
   @JsonbTransient
   private Integer age;
   // end::adocSkiptransient[]
   private LocalDateTime creationDate;
-  @JsonbDateFormat
+  @JsonbDateFormat("yyyy-MM-dd HH:mm:ss")
   private LocalDateTime updateDate;
-  @JsonbDateFormat
   private Date deleteDate;
 
   // Constructors, getters, setters
@@ -36,13 +35,15 @@ public class Customer {
   public Customer() {
   }
 
-  public Customer(String firstName, String lastName, String email, String phoneNumber, LocalDate dateOfBirth, LocalDateTime creationDate) {
+  public Customer(String firstName, String lastName, String email, String phoneNumber, LocalDate dateOfBirth, LocalDateTime creationDate, LocalDateTime updateDate, Date deleteDate) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.phoneNumber = phoneNumber;
     this.dateOfBirth = dateOfBirth;
     this.creationDate = creationDate;
+    this.updateDate = updateDate;
+    this.deleteDate = deleteDate;
   }
 
   // ======================================
