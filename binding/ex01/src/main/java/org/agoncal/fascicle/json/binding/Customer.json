@@ -1,3 +1,12 @@
 // tag::adocShouldMarshallACustomer[]
-{"creationDate":"2019-12-09T13:00:39.62473","dateOfBirth":"29/05/1971","deleteDate":"2019-12-09T12:00:39.626Z[UTC]","email":"jsmith@gmail.com","firstName":"John","lastName":"Smith","phoneNumber":"1234565","updateDate":"2019-12-09 13:00:39"}
+{
+  "creationDate": "2019-12-09T13:00:39.62473",
+  "dateOfBirth": "29/05/1971",
+  "deleteDate": "2019-12-09T12:00:39.626Z[UTC]",
+  "email": "jsmith@gmail.com",
+  "firstName": "John",
+  "lastName": "Smith",
+  "phoneNumber": "1234565",
+  "updateDate": "2019-12-09 13:00:39"
+}
 // end::adocShouldMarshallACustomer[]

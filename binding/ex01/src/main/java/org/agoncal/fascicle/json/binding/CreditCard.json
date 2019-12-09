@@ -1,3 +1,8 @@
 // tag::shouldMarshallACreditCard[]
-{"controlNumber":1253,"expiryDate":"12/12","number":"123412341234","type":"AMERICAN_EXPRESS"}
+{
+  "controlNumber": 1253,
+  "expiryDate": "12/12",
+  "number": "123412341234",
+  "type": "AMERICAN_EXPRESS"
+}
 // end::shouldMarshallACreditCard[]
