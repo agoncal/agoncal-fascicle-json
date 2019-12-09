@@ -1,0 +1,12 @@
+// tag::shouldMarshallABookWithTags[]
+{
+  "description": "Released in October 1976",
+  "price": 12.5,
+  "title": "Zoot Allures",
+  "tracks": {
+    "1": "Wind Up Workin' in a Gas Station",
+    "2": "Black Napkins",
+    "3": "The Torture Never Stops"
+  }
+}
+// end::shouldMarshallABookWithTags[]
