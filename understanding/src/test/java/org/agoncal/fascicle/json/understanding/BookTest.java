@@ -1,13 +1,19 @@
 package org.agoncal.fascicle.json.understanding;
 
-import com.jayway.jsonpath.JsonPath;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
+import static org.agoncal.fascicle.json.UtilTest.initBufferedWriter;
+import static org.agoncal.fascicle.json.UtilTest.jsonPath;
+import static org.agoncal.fascicle.json.UtilTest.output;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -25,16 +31,31 @@ public class BookTest {
     jsonb = JsonbBuilder.create(config);
   }
 
+  static BufferedWriter bw;
+
+  @BeforeAll
+  static void initFile() throws FileNotFoundException {
+    bw = initBufferedWriter("src/main/java/org/agoncal/fascicle/json/understanding/Book.json");
+  }
+
+  @AfterAll
+  static void closeFile() throws IOException {
+    bw.close();
+  }
+
   // ======================================
   // =              Methods               =
   // ======================================
 
   @Test
-  void shouldBindABook() {
+  void shouldMarshallABook() throws IOException {
 
     Book book = new Book().title("H2G2").price(12.5F).isbn("1-84023-742-2").nbOfPages(354).illustrations(false).description("Best Sci-fi book ever");
 
+    Jsonb jsonb = JsonbBuilder.create();
     String json = jsonb.toJson(book);
+
+    output(bw, json, "shouldMarshallABook");
 
     assertEquals("H2G2", jsonPath(json, "$.title"));
     assertEquals(12.5, jsonPath(json, "$.price"));
@@ -42,16 +63,5 @@ public class BookTest {
     assertEquals(354, jsonPath(json, "$.nbOfPages"));
     assertEquals(Boolean.FALSE, jsonPath(json, "$.illustrations"));
     assertEquals("Best Sci-fi book ever", jsonPath(json, "$.description"));
-  }
-
-  @Test
-  void output() {
-    Book book = new Book().title("H2G2");
-    String json = jsonb.toJson(book);
-    System.out.println(json);
-  }
-
-  private Object jsonPath(String json, String jsonPath) {
-    return JsonPath.read(json, jsonPath);
   }
 }
