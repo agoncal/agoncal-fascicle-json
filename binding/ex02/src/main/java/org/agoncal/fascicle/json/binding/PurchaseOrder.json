@@ -1,0 +1,17 @@
+// tag::shouldMarshallAnOrderWithTwoOrderLines[]
+{
+  "creationDate": "2019-12-13T07:42:06.562009",
+  "orderLines": [
+    {
+      "item": "H2G2",
+      "quantity": 1,
+      "unitPrice": 12.0
+    },
+    {
+      "item": "The White Album",
+      "quantity": 2,
+      "unitPrice": 14.5
+    }
+  ]
+}
+// end::shouldMarshallAnOrderWithTwoOrderLines[]
