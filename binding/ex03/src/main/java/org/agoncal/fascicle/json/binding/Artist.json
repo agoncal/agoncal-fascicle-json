@@ -1,0 +1,18 @@
+// tag::shouldMarshallThreeCDsAndFourArtists[]
+{
+  "appearsOnCDs": [
+    {
+      "description": "Best Beatles Album",
+      "price": 28.5,
+      "title": "Sergent Pepper"
+    },
+    {
+      "description": "Hendrix live with friends",
+      "price": 32.0,
+      "title": "Hey Joe"
+    }
+  ],
+  "firstName": "John",
+  "lastName": "Lenon"
+}
+// end::shouldMarshallThreeCDsAndFourArtists[]
