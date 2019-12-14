@@ -1,0 +1,29 @@
+// tag::shouldMarshallAnItem[]
+{
+  "description": "A piece of junk",
+  "price": 52.5,
+  "title": "Junk"
+}
+// end::shouldMarshallAnItem[]
+// tag::shouldMarshallACD[]
+{
+  "description": "Beatles master piece",
+  "price": 12.8,
+  "title": "St Pepper",
+  "genre": "Pop/Rock",
+  "musicCompany": "Apple",
+  "numberOfCDs": 1,
+  "totalDuration": 53.32
+}
+// end::shouldMarshallACD[]
+// tag::shouldMarshallABook[]
+{
+  "description": "Best IT book",
+  "price": 21.0,
+  "title": "H2G2",
+  "illustrations": false,
+  "isbn": "123-456-789",
+  "nbOfPages": 321,
+  "publisher": "Pinguin"
+}
+// end::shouldMarshallABook[]

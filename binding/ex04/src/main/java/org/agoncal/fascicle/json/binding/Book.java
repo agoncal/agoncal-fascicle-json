@@ -1,14 +1,11 @@
 package org.agoncal.fascicle.json.binding;
 
-import javax.persistence.Entity;
-
 /**
  * @author Antonio Goncalves
  * http://www.antoniogoncalves.org
  * --
  */
 // tag::adocSnippet[]
-@Entity
 public class Book extends Item {
 
   private String isbn;
