@@ -1,11 +1,11 @@
-// tag::LowerCaseWithDashes[]
+// tag::adocShouldMarshallAnAuthorWithLowerCaseWithDashes[]
 {
   "date-of-birth": "1952-03-11",
   "email": "adams@douglas.com",
   "first-name": "Adams",
   "last-name": "Douglas"
 }
-// end::LowerCaseWithDashes[]
+// end::adocShouldMarshallAnAuthorWithLowerCaseWithDashes[]
 // tag::adocShouldMarshallAnAuthorWithIdentity[]
 {
   "dateOfBirth": "1952-03-11",

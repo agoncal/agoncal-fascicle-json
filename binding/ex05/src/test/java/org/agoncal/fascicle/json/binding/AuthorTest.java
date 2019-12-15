@@ -91,7 +91,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithLowerCaseWithDashes[]
 
-    output(bw, json, "LowerCaseWithDashes");
+    output(bw, json, "adocShouldMarshallAnAuthorWithLowerCaseWithDashes");
 
     assertEquals("Adams", jsonPath(json, "$.first-name"));
     assertEquals("Douglas", jsonPath(json,"$.last-name"));
