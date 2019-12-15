@@ -1,0 +1,48 @@
+// tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
+{
+  "delivery-address": {
+    "city": "London",
+    "country": "UK",
+    "state": "LDN",
+    "street1": "65B Ritherdon Rd",
+    "street2": "At James place",
+    "zipcode": "7QE554"
+  },
+  "email": "jsmith@gmail.com",
+  "firstName": "John",
+  "lastName": "Smith",
+  "phoneNumber": "1234565"
+}
+// end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
+// tag::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
+{
+  "phoneNumber": "1234565",
+  "lastName": "Smith",
+  "firstName": "John",
+  "email": "jsmith@gmail.com",
+  "delivery-address": {
+    "zipcode": "7QE554",
+    "street2": "At James place",
+    "street1": "65B Ritherdon Rd",
+    "state": "LDN",
+    "country": "UK",
+    "city": "London"
+  }
+}
+// end::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
+// tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "phoneNumber": "1234565",
+  "delivery-address": {
+    "zipcode": "7QE554",
+    "country": "UK",
+    "city": "London",
+    "street1": "65B Ritherdon Rd",
+    "street2": "At James place",
+    "state": "LDN"
+  },
+  "email": "jsmith@gmail.com"
+}
+// end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]

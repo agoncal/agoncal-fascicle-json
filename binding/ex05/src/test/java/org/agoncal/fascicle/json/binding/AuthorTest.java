@@ -23,7 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocBegin[]
 public class AuthorTest {
 
   static BufferedWriter bw;
