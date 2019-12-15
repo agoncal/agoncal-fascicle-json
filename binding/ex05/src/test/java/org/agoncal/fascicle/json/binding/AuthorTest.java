@@ -53,7 +53,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithCaseInsensitive[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithCaseInsensitive");
+    output(bw, json, "adocShouldMarshallAnAuthorWithCaseInsensitive");
 
     assertEquals("Adams", jsonPath(json, "$.firstName"));
     assertEquals("Douglas", jsonPath(json,"$.lastName"));
@@ -72,7 +72,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithIdentity[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithIdentity");
+    output(bw, json, "adocShouldMarshallAnAuthorWithIdentity");
 
     assertEquals("Adams", jsonPath(json, "$.firstName"));
     assertEquals("Douglas", jsonPath(json,"$.lastName"));
@@ -110,7 +110,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithLowerCaseWithUnderscores[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithLowerCaseWithUnderscores");
+    output(bw, json, "adocShouldMarshallAnAuthorWithLowerCaseWithUnderscores");
 
     assertEquals("Adams", jsonPath(json, "$.first_name"));
     assertEquals("Douglas", jsonPath(json,"$.last_name"));
@@ -129,7 +129,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithUpperCamelCase[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithUpperCamelCase");
+    output(bw, json, "adocShouldMarshallAnAuthorWithUpperCamelCase");
 
     assertEquals("Adams", jsonPath(json, "$.FirstName"));
     assertEquals("Douglas", jsonPath(json,"$.LastName"));
@@ -148,7 +148,7 @@ public class AuthorTest {
     String json = jsonb.toJson(author);
     // end::adocShouldMarshallAnAuthorWithUpperCamelCaseWithSpaces[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithUpperCamelCaseWithSpaces");
+    output(bw, json, "adocShouldMarshallAnAuthorWithUpperCamelCaseWithSpaces");
 
     assertEquals("Adams", jsonPath(json, "$.['First Name']"));
     assertEquals("Douglas", jsonPath(json,"$.['Last Name']"));

@@ -6,43 +6,43 @@
   "last-name": "Douglas"
 }
 // end::LowerCaseWithDashes[]
-// tag::shouldMarshallAnAuthorWithIdentity[]
+// tag::adocShouldMarshallAnAuthorWithIdentity[]
 {
   "dateOfBirth": "1952-03-11",
   "email": "adams@douglas.com",
   "firstName": "Adams",
   "lastName": "Douglas"
 }
-// end::shouldMarshallAnAuthorWithIdentity[]
-// tag::shouldMarshallAnAuthorWithLowerCaseWithUnderscores[]
+// end::adocShouldMarshallAnAuthorWithIdentity[]
+// tag::adocShouldMarshallAnAuthorWithLowerCaseWithUnderscores[]
 {
   "date_of_birth": "1952-03-11",
   "email": "adams@douglas.com",
   "first_name": "Adams",
   "last_name": "Douglas"
 }
-// end::shouldMarshallAnAuthorWithLowerCaseWithUnderscores[]
-// tag::shouldMarshallAnAuthorWithCaseInsensitive[]
+// end::adocShouldMarshallAnAuthorWithLowerCaseWithUnderscores[]
+// tag::adocShouldMarshallAnAuthorWithCaseInsensitive[]
 {
   "dateOfBirth": "1952-03-11",
   "email": "adams@douglas.com",
   "firstName": "Adams",
   "lastName": "Douglas"
 }
-// end::shouldMarshallAnAuthorWithCaseInsensitive[]
-// tag::shouldMarshallAnAuthorWithUpperCamelCaseWithSpaces[]
+// end::adocShouldMarshallAnAuthorWithCaseInsensitive[]
+// tag::adocShouldMarshallAnAuthorWithUpperCamelCaseWithSpaces[]
 {
   "Date Of Birth": "1952-03-11",
   "Email": "adams@douglas.com",
   "First Name": "Adams",
   "Last Name": "Douglas"
 }
-// end::shouldMarshallAnAuthorWithUpperCamelCaseWithSpaces[]
-// tag::shouldMarshallAnAuthorWithUpperCamelCase[]
+// end::adocShouldMarshallAnAuthorWithUpperCamelCaseWithSpaces[]
+// tag::adocShouldMarshallAnAuthorWithUpperCamelCase[]
 {
   "DateOfBirth": "1952-03-11",
   "Email": "adams@douglas.com",
   "FirstName": "Adams",
   "LastName": "Douglas"
 }
-// end::shouldMarshallAnAuthorWithUpperCamelCase[]
+// end::adocShouldMarshallAnAuthorWithUpperCamelCase[]
