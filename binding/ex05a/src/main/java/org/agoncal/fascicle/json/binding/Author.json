@@ -1,0 +1,8 @@
+// tag::shouldMarshallAnAuthorWithCaseInsensitive[]
+{
+  "dateOfBirth": "1952-03-11",
+  "email": "adams@douglas.com",
+  "firstName": "Adams",
+  "lastName": "Douglas"
+}
+// end::shouldMarshallAnAuthorWithCaseInsensitive[]
