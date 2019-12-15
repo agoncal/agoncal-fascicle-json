@@ -41,9 +41,9 @@ public class CustomerTest {
   // ======================================
 
   @Test
-  public void shouldMarshallAnAuthorWithPropertyOrderStrategyAny() throws Exception {
+  public void shouldMarshallACustomerWithPropertyOrderStrategyAny() throws Exception {
 
-    // tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]
+    // tag::adocShouldMarshallACustomerWithPropertyOrderStrategyAny[]
     Customer customer = new Customer("John", "Smith", "jsmith@gmail.com", "1234565");
     Address address = new Address("65B Ritherdon Rd", "At James place", "London", "LDN", "7QE554", "UK");
     customer.setAddress(address);
@@ -51,9 +51,9 @@ public class CustomerTest {
     JsonbConfig config = new JsonbConfig().withPropertyOrderStrategy(PropertyOrderStrategy.ANY);
     Jsonb jsonb = JsonbBuilder.create(config);
     String json = jsonb.toJson(customer);
-    // end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]
+    // end::adocShouldMarshallACustomerWithPropertyOrderStrategyAny[]
 
-    output(bw, json, "adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny");
+    output(bw, json, "adocShouldMarshallACustomerWithPropertyOrderStrategyAny");
 
     assertEquals("John", jsonPath(json, "$.firstName"));
     assertEquals("Smith", jsonPath(json, "$.lastName"));
@@ -67,9 +67,9 @@ public class CustomerTest {
     assertEquals("UK", jsonPath(json, "$.delivery-address.country"));
   }
   @Test
-  public void shouldMarshallAnAuthorWithPropertyOrderStrategyReverse() throws Exception {
+  public void shouldMarshallACustomerWithPropertyOrderStrategyReverse() throws Exception {
 
-    // tag::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
+    // tag::shouldMarshallACustomerWithPropertyOrderStrategyReverse[]
     Customer customer = new Customer("John", "Smith", "jsmith@gmail.com", "1234565");
     Address address = new Address("65B Ritherdon Rd", "At James place", "London", "LDN", "7QE554", "UK");
     customer.setAddress(address);
@@ -77,9 +77,9 @@ public class CustomerTest {
     JsonbConfig config = new JsonbConfig().withPropertyOrderStrategy(PropertyOrderStrategy.REVERSE);
     Jsonb jsonb = JsonbBuilder.create(config);
     String json = jsonb.toJson(customer);
-    // end::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
+    // end::shouldMarshallACustomerWithPropertyOrderStrategyReverse[]
 
-    output(bw, json, "shouldMarshallAnAuthorWithPropertyOrderStrategyReverse");
+    output(bw, json, "shouldMarshallACustomerWithPropertyOrderStrategyReverse");
 
     assertEquals("John", jsonPath(json, "$.firstName"));
     assertEquals("Smith", jsonPath(json, "$.lastName"));
@@ -94,9 +94,9 @@ public class CustomerTest {
   }
 
   @Test
-  public void shouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical() throws Exception {
+  public void shouldMarshallACustomerWithPropertyOrderStrategyLexicographical() throws Exception {
 
-    // tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
+    // tag::adocShouldMarshallACustomerWithPropertyOrderStrategyLexicographical[]
     Customer customer = new Customer("John", "Smith", "jsmith@gmail.com", "1234565");
     Address address = new Address("65B Ritherdon Rd", "At James place", "London", "LDN", "7QE554", "UK");
     customer.setAddress(address);
@@ -104,9 +104,9 @@ public class CustomerTest {
     JsonbConfig config = new JsonbConfig().withPropertyOrderStrategy(PropertyOrderStrategy.LEXICOGRAPHICAL);
     Jsonb jsonb = JsonbBuilder.create(config);
     String json = jsonb.toJson(customer);
-    // end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
+    // end::adocShouldMarshallACustomerWithPropertyOrderStrategyLexicographical[]
 
-    output(bw, json, "adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical");
+    output(bw, json, "adocShouldMarshallACustomerWithPropertyOrderStrategyLexicographical");
 
     assertEquals("John", jsonPath(json, "$.firstName"));
     assertEquals("Smith", jsonPath(json, "$.lastName"));

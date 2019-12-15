@@ -1,0 +1,16 @@
+// tag::adocShouldMarshallACustomerWithMixStrategy[]
+{
+  "delivery-address": {
+    "city": "London",
+    "country": "UK",
+    "state": "LDN",
+    "street1": "65B Ritherdon Rd",
+    "street2": "At James place",
+    "zipcode": "7QE554"
+  },
+  "email": "jsmith@gmail.com",
+  "firstName": "John",
+  "lastName": "Smith",
+  "phoneNumber": "1234565"
+}
+// end::adocShouldMarshallACustomerWithMixStrategy[]
