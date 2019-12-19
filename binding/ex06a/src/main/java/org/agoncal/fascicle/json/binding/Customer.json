@@ -1,4 +1,4 @@
-// tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
+// tag::adocShouldMarshallACustomerWithPropertyOrderStrategyLexicographical[]
 {
   "delivery-address": {
     "city": "London",
@@ -13,24 +13,8 @@
   "lastName": "Smith",
   "phoneNumber": "1234565"
 }
-// end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyLexicographical[]
-// tag::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
-{
-  "phoneNumber": "1234565",
-  "lastName": "Smith",
-  "firstName": "John",
-  "email": "jsmith@gmail.com",
-  "delivery-address": {
-    "zipcode": "7QE554",
-    "street2": "At James place",
-    "street1": "65B Ritherdon Rd",
-    "state": "LDN",
-    "country": "UK",
-    "city": "London"
-  }
-}
-// end::shouldMarshallAnAuthorWithPropertyOrderStrategyReverse[]
-// tag::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]
+// end::adocShouldMarshallACustomerWithPropertyOrderStrategyLexicographical[]
+// tag::adocShouldMarshallACustomerWithPropertyOrderStrategyAny[]
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -45,4 +29,20 @@
   },
   "email": "jsmith@gmail.com"
 }
-// end::adocShouldMarshallAnAuthorWithPropertyOrderStrategyAny[]
+// end::adocShouldMarshallACustomerWithPropertyOrderStrategyAny[]
+// tag::adocShouldMarshallACustomerWithPropertyOrderStrategyReverse[]
+{
+  "phoneNumber": "1234565",
+  "lastName": "Smith",
+  "firstName": "John",
+  "email": "jsmith@gmail.com",
+  "delivery-address": {
+    "zipcode": "7QE554",
+    "street2": "At James place",
+    "street1": "65B Ritherdon Rd",
+    "state": "LDN",
+    "country": "UK",
+    "city": "London"
+  }
+}
+// end::adocShouldMarshallACustomerWithPropertyOrderStrategyReverse[]

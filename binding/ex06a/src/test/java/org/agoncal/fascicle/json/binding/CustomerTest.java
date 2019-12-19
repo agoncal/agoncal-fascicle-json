@@ -69,7 +69,7 @@ public class CustomerTest {
   @Test
   public void shouldMarshallACustomerWithPropertyOrderStrategyReverse() throws Exception {
 
-    // tag::shouldMarshallACustomerWithPropertyOrderStrategyReverse[]
+    // tag::adocShouldMarshallACustomerWithPropertyOrderStrategyReverse[]
     Customer customer = new Customer("John", "Smith", "jsmith@gmail.com", "1234565");
     Address address = new Address("65B Ritherdon Rd", "At James place", "London", "LDN", "7QE554", "UK");
     customer.setAddress(address);
@@ -77,9 +77,9 @@ public class CustomerTest {
     JsonbConfig config = new JsonbConfig().withPropertyOrderStrategy(PropertyOrderStrategy.REVERSE);
     Jsonb jsonb = JsonbBuilder.create(config);
     String json = jsonb.toJson(customer);
-    // end::shouldMarshallACustomerWithPropertyOrderStrategyReverse[]
+    // end::adocShouldMarshallACustomerWithPropertyOrderStrategyReverse[]
 
-    output(bw, json, "shouldMarshallACustomerWithPropertyOrderStrategyReverse");
+    output(bw, json, "adocShouldMarshallACustomerWithPropertyOrderStrategyReverse");
 
     assertEquals("John", jsonPath(json, "$.firstName"));
     assertEquals("Smith", jsonPath(json, "$.lastName"));
