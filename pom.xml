@@ -32,7 +32,7 @@
     <version.jpa-api>2.2</version.jpa-api>
     <!-- Test -->
     <version.junit>5.3.2</version.junit>
-    <version.jsonpath>2.4.0</version.jsonpath>
+    <version.jsonpath>2.9.0</version.jsonpath>
     <!-- Core Maven Plugins -->
     <version.antrun.plugin>1.8</version.antrun.plugin>
     <version.archetype.plugin>3.1.2</version.archetype.plugin>
